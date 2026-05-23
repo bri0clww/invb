@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Invitación</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+ 
+
+    <div class="splash" id="splash">
+
+        <div class="sobre">
+
+            <div class="tapa"></div>
+
+        </div>
+
+     
+
+        <button class="btn-entrar" onclick="entrarInvitacion()">
+            Abrir Invitación 
+        </button>
+
+    </div>
+
+  
+
+    <div class="contenido" id="contenido">
+
+        <div class="tarjeta">
+
+            <h2 class="subtitulo">
+                GRAN CELEBRACIÓN 
+            </h2>
+
+            <h1>
+                Estás Invitado a mi fiesta
+            </h1>
+
+            <p class="descripcion">
+                Acompáñame a celebrar mi graduación 
+            </p>
+
+
+            <div class="calendario">
+
+                <div class="mes">
+                    JUNIO 2026
+                </div>
+
+                <div class="dia">
+                    13
+                </div>
+
+                <div class="texto">
+                     3:00 PM
+                </div>
+
+            </div>
+
+            
+
+            <h2 class="titulo-mapa">
+                 Ubicación del salón
+            </h2>
+
+            <div class="mapa">
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d946.0421643951726!2d-97.40841793041494!3d18.476018098913045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c5a2cdae95b805%3A0x3d26d2e1da6421ff!2sC.%20Iztaccihuatl%201607%2C%203ra%20Secc%20Constituyentes%2C%2075710%20Tehuac%C3%A1n%2C%20Pue.!5e0!3m2!1ses-419!2smx!4v1779500034964!5m2!1ses-419!2smx"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+
+          
+
+            <button class="btn-confirmar" onclick="mostrarMensaje()">
+                 Confirmar asistencia
+            </button>
+
+            <p id="mensaje"></p>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        function entrarInvitacion() {
+
+            document.getElementById("splash").style.opacity = "0";
+
+            setTimeout(() => {
+
+                document.getElementById("splash").style.display = "none";
+
+                document.getElementById("contenido").style.display = "flex";
+
+            }, 800);
+
+        }
+
+        function mostrarMensaje() {
+
+            document.getElementById("mensaje").innerHTML =
+                " ¡Te esperamos este 13 de junio!";
+
+        }
+
+    </script>
+
+</body>
+
+</html>
